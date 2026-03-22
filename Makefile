@@ -1,8 +1,8 @@
 build:
-	go build -o bin/fs
+	@go build -buildvcs=false -o bin/fs
 
-run:
-	./bin/fs
+run: build
+	@./bin/fs
 
 test:
-	go test ./... -v
+	@go test ./... -v
